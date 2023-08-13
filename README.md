@@ -1,6 +1,6 @@
 ## Welcome to [Your App Name] GitHub Page!
 
-![App Screenshot]([screenshot.png](https://github.com/naduncalcey/pokemon-tcg-app/blob/main/src/assets/screenshots/screenshot.png)) <!-- Replace with an actual screenshot of your app -->
+![App Screenshot](https://github.com/naduncalcey/pokemon-tcg-app/blob/main/src/assets/screenshots/screenshot.png) <!-- Replace with an actual screenshot of your app -->
 
 ### About
 
