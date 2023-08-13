@@ -1,10 +1,10 @@
-## Welcome to [Your App Name] GitHub Page!
+## Welcome to Pokemon TCG Search V1 GitHub Page!
 
 ![App Screenshot](https://github.com/naduncalcey/pokemon-tcg-app/blob/main/src/assets/screenshots/screenshot.png) <!-- Replace with an actual screenshot of your app -->
 
 ### About
 
-🚀 Welcome to the GitHub page of [Your App Name]! This is the place to discover and explore the exciting features we've developed for our app.
+🚀 Welcome to the GitHub page of Pokemon TCG Search V1! This is the place to discover and explore the exciting features we've developed for our app.
 
 ### Features
 
@@ -13,8 +13,6 @@
 🔍 **Search and Filter:** Easily search for your favorite Pokémon cards using our intuitive search feature. Filter cards based on sets, types, and more!
 
 📈 **Smooth Scrolling:** Enjoy a smooth and delightful scrolling experience throughout the app, ensuring a seamless interaction.
-
-🔝 **Back to Top:** Scroll with ease! The convenient "Back to Top" button allows you to smoothly navigate back to the top of the content.
 
 🎉 **Interactive Card Grid:** Explore a beautiful grid of Pokémon cards. Toggle between list and grid views to match your preferred browsing style.
 
@@ -35,6 +33,6 @@ Found a bug? Have a suggestion? We'd love to hear from you! Please feel free to 
 
 ### Stay Connected
 
-Follow us on [Twitter](https://twitter.com/your-twitter) for updates, tips, and more exciting content related to [Your App Name].
+Follow us on [Twitter](https://twitter.com/your-twitter) for updates, tips, and more exciting content related to Pokemon TCG Search V1.
 
 Thanks for visiting our GitHub page! Enjoy exploring our app's fantastic features and dive into the world of Pokémon trading cards like never before. 🌟
