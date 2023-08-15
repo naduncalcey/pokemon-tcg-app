@@ -16,35 +16,9 @@ export const ChangeView = styled.div`
 
 export const LayoutCardGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  row-gap: 16px;
-
-  @media (max-width: 1920px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  }
-  @media (max-width: 1600px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  }
-
-  @media (max-width: 1200px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-
-  @media (max-width: 992px) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  @media (max-width: 576px) {
-    grid-template-columns: 1fr;
-  }
+  grid-template-columns: repeat(auto-fit, minmax(242px, 1fr));
+  gap: 16px;
   .pk {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     &-card {
       border-radius: 10px;
       border: 1px solid rgb(188, 188, 188);
@@ -63,6 +37,11 @@ export const LayoutCardGrid = styled.div`
           font-weight: 500;
           color: #fff;
         }
+      }
+      .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       img {
         width: 240px;

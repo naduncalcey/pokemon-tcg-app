@@ -108,7 +108,7 @@ function CardGrid({ pokemonCards }) {
                       </p>
                     )}
                   </div>
-                  <div>
+                  <div className="image-container">
                     <img src={card.images.small} alt={card.name} />
                   </div>
                   <div className="bottom-bar">
