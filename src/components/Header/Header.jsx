@@ -13,7 +13,8 @@ import {
   CssBaseline,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import HomeIcon from "@mui/icons-material/Home";
+import StyleIcon from '@mui/icons-material/Style';
+import DatasetIcon from '@mui/icons-material/Dataset';
 import InfoIcon from "@mui/icons-material/Info";
 
 function Header() {
@@ -26,13 +27,19 @@ function Header() {
   const drawerContent = (
     <div>
       <List>
-        <ListItem button component="a" href="#" onClick={toggleDrawer(false)}>
+        <ListItem button component="a" href="/" onClick={toggleDrawer(false)}>
           <ListItemIcon>
-            <HomeIcon />
+            <StyleIcon />
           </ListItemIcon>
-          <ListItemText primary="Home" />
+          <ListItemText primary="Card Search" />
         </ListItem>
-        <ListItem button component="a" href="#" onClick={toggleDrawer(false)}>
+        <ListItem button component="a" href="/set-search" onClick={toggleDrawer(false)}>
+          <ListItemIcon>
+            <DatasetIcon />
+          </ListItemIcon>
+          <ListItemText primary="Set Search" />
+        </ListItem>
+        <ListItem button component="a" href="/about" onClick={toggleDrawer(false)}>
           <ListItemIcon>
             <InfoIcon />
           </ListItemIcon>

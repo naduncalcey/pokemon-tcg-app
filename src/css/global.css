@@ -26,10 +26,15 @@
 }
 
 .back-to-top {
+    display: flex;
     position: fixed;
     z-index: 999;
     bottom: 2rem;
     right: 2rem;
+    width: 60px;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
     padding: 0.5rem 1rem;
     background-color: #007bff;
     color: white;
