@@ -7,4 +7,7 @@ export const SetSearchLayout = styled.div`
         font-size: 16px;
         font-weight: 500;
     }
+    .set-search-container {
+        padding-bottom: 16px;
+    }
 `;
