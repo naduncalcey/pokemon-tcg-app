@@ -12,6 +12,8 @@
 
 🔍 **Search and Filter:** Easily search for your favorite Pokémon cards using our intuitive search feature. Filter cards based on sets, types, and more!
 
+🔍 **Search Pokemon TCG Sets:** Easily search for your favorite Pokémon card sets using our intuitive search feature. Filter cards based on sets, types, and more!
+
 📈 **Smooth Scrolling:** Enjoy a smooth and delightful scrolling experience throughout the app, ensuring a seamless interaction.
 
 🎉 **Interactive Card Grid:** Explore a beautiful grid of Pokémon cards. Toggle between list and grid views to match your preferred browsing style.
