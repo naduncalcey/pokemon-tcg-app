@@ -17,14 +17,13 @@ export const ChangeView = styled.div`
 export const LayoutCardGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(242px, 1fr));
-  gap: 16px;
+  gap: 20px;
   .pk {
     &-card {
+      padding: 0.5rem;
       border-radius: 10px;
-      border: 1px solid rgb(188, 188, 188);
       &-title {
         padding: 10px 10px;
-        border-bottom: 1px solid rgb(188, 188, 188);
         display: flex;
         justify-content: space-between;
         h4 {
@@ -36,6 +35,7 @@ export const LayoutCardGrid = styled.div`
           border-radius: 50px;
           font-weight: 500;
           color: #fff;
+          font-family:"ROBOTO"!important;
         }
       }
       .image-container {
@@ -50,17 +50,9 @@ export const LayoutCardGrid = styled.div`
     }
   }
   .bottom-bar {
-    border-top: 1px solid rgb(188, 188, 188);
-    padding: 5px;
-    button {
-      width: 100%;
-      border-radius: 6px;
-      background-color: #1776d1;
-      color: #fff;
-      &:hover {
-        background-color: #b1d9ff;
-        color: #1776d1;
-      }
+    padding: 0.25rem 0;
+    display: grid;
+    place-items: center;
     }
   }
 `;

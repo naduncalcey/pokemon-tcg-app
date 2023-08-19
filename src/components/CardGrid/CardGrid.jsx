@@ -91,17 +91,17 @@ function CardGrid({ pokemonCards }) {
         ) : (
           <LayoutCardGrid>
             {pokemonCards.map((card) => (
-              <div key={card.id} className="pk">
+              <Paper elevation={3} key={card.id} className="pk">
                 <div className="pk-card">
                   <div className="pk-card-title">
-                    <h4>{card.name}</h4>
+                    <h4 title="card name">{card.name}</h4>
                     {card.types && card.types[0] && (
                       <p
                         className="type-pill"
+                        title="type"
                         style={{
-                          background: `${
-                            typeToImage[card.types[0].toLowerCase()]
-                          }`,
+                          fontSize: "0.85rem",
+                          color: `${typeToImage[card.types[0].toLowerCase()]}`,
                         }}
                       >
                         {card.types[0]}
@@ -109,7 +109,11 @@ function CardGrid({ pokemonCards }) {
                     )}
                   </div>
                   <div className="image-container">
-                    <img src={card.images.small} alt={card.name} />
+                    <img
+                      loading="lazy"
+                      src={card.images.small}
+                      alt={card.name}
+                    />
                   </div>
                   <div className="bottom-bar">
                     <Button onClick={() => handleViewClick(card)}>
@@ -117,7 +121,7 @@ function CardGrid({ pokemonCards }) {
                     </Button>
                   </div>
                 </div>
-              </div>
+              </Paper>
             ))}
           </LayoutCardGrid>
         )}

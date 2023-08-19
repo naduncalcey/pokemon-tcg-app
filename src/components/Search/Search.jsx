@@ -56,7 +56,7 @@ function Search() {
   return (
     <>
       <SearchContainer>
-        <Stack>
+        <Stack style={{ background: "#fff" }}>
           <Autocomplete
             id="pokemon-card-search"
             getOptionLabel={(option) => option} // Use the option parameter directly
