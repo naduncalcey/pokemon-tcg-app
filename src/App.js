@@ -50,7 +50,9 @@ function App() {
       <div className="App">
         <CssBaseline />
         <Header />
-        <PerfectScrollbar containerRef={(ref) => (scrollContainerRef.current = ref)}>
+        <PerfectScrollbar
+          containerRef={(ref) => (scrollContainerRef.current = ref)}
+        >
           <Routes>
             <Route path="/" element={<Search />} />
             <Route path="/set-search" element={<SetSearch />} />
@@ -58,7 +60,10 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </PerfectScrollbar>
-        <BackToTopButton showBackToTop={showBackToTop} scrollToTop={scrollToTop} />
+        <BackToTopButton
+          showBackToTop={showBackToTop}
+          scrollToTop={scrollToTop}
+        />
         <Footer />
       </div>
     </Router>
