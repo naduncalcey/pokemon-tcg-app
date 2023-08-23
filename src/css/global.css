@@ -13,15 +13,15 @@
 
 /* App.css */
 .App {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .Content {
-    flex: 1;
-    overflow: auto;  /* Adjust this value to match the header height */
+  flex: 1;
+  overflow: auto; /* Adjust this value to match the header height */
 }
 
 .back-to-top {
@@ -59,3 +59,21 @@
     .page-number {
       margin: 0 20px; /* Add some space between the page number and buttons */
     }
+
+.back-to-top:hover {
+  background-color: #0056b3;
+}
+
+.scrollbar-container {
+  background: rgb(244, 244, 244) !important;
+}
+
+.git-link {
+  text-decoration: none;
+  font-weight: 500;
+  color: #007bff;
+}
+
+.git-link:hover {
+  color: #0056b3;
+}
