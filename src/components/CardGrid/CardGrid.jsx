@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Button,
   Table,
@@ -30,6 +30,12 @@ const typeToImage = {
 function CardGrid({ pokemonCards }) {
   const [selectedCard, setSelectedCard] = useState(null);
   const [isListView, setIsListView] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const cardsPerPage = 15;
+  const startIndex = (currentPage - 1) * cardsPerPage;
+  const endIndex = startIndex + cardsPerPage;
+  const displayedCards = pokemonCards.slice(startIndex, endIndex);
 
   const handleViewClick = (card) => {
     setSelectedCard(card);
@@ -41,7 +47,12 @@ function CardGrid({ pokemonCards }) {
 
   const handleListViewClick = () => {
     setIsListView(!isListView);
+    setCurrentPage(1); // Reset to the first page
   };
+
+  useEffect(() => {
+    setCurrentPage(1); // Reset to the first page when data changes
+  }, [pokemonCards]);
 
   return (
     <>
@@ -90,7 +101,7 @@ function CardGrid({ pokemonCards }) {
           </TableContainer>
         ) : (
           <LayoutCardGrid>
-            {pokemonCards.map((card) => (
+            {displayedCards.map((card) => (
               <Paper elevation={3} key={card.id} className="pk">
                 <div className="pk-card">
                   <div className="pk-card-title">
@@ -124,6 +135,35 @@ function CardGrid({ pokemonCards }) {
               </Paper>
             ))}
           </LayoutCardGrid>
+        )}
+        {pokemonCards.length === 0 ? (
+          null
+        ) : (
+          <div className="pagination-container">
+            <Button
+              onClick={() => setCurrentPage(currentPage - 1)}
+              disabled={currentPage === 1}
+            >
+              Previous
+            </Button>
+            {Array.from({ length: Math.ceil(pokemonCards.length / cardsPerPage) }).map(
+              (_, index) => (
+                <Button
+                  key={index}
+                  onClick={() => setCurrentPage(index + 1)}
+                  disabled={currentPage === index + 1}
+                >
+                  {index + 1}
+                </Button>
+              )
+            )}
+            <Button
+              onClick={() => setCurrentPage(currentPage + 1)}
+              disabled={endIndex >= pokemonCards.length}
+            >
+              Next
+            </Button>
+          </div>
         )}
 
         {/* Render the CardDetailView component */}

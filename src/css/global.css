@@ -48,3 +48,14 @@
     .scrollbar-container {
       background: rgb(244, 244, 244) !important;
     }
+
+    .pagination-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px; /* Add some space at the top */
+    }
+    
+    .page-number {
+      margin: 0 20px; /* Add some space between the page number and buttons */
+    }
