@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { CssBaseline } from "@mui/material";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Search from "./components/Search/Search";
 import Footer from "./components/Footer/Footer";
@@ -14,7 +13,7 @@ import SetSearch from "./components/SetSearch/SetSearch";
 function App() {
   const [showBackToTop, setShowBackToTop] = useState(false);
   const scrollContainerRef = useRef(null);
-  
+
   useEffect(() => {
     const handleScroll = () => {
       if (scrollContainerRef.current) {
@@ -46,27 +45,24 @@ function App() {
   };
 
   return (
-    <Router>
-      <div className="App">
-        <CssBaseline />
-        <Header />
-        <PerfectScrollbar
-          containerRef={(ref) => (scrollContainerRef.current = ref)}
-        >
-          <Routes>
-            <Route path="/" element={<Search />} />
-            <Route path="/set-search" element={<SetSearch />} />
-            <Route path="/about" element={<About />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </PerfectScrollbar>
-        <BackToTopButton
-          showBackToTop={showBackToTop}
-          scrollToTop={scrollToTop}
-        />
-        <Footer />
-      </div>
-    </Router>
+    <div className="App">
+      <Header />
+      <PerfectScrollbar
+        containerRef={(ref) => (scrollContainerRef.current = ref)}
+      >
+        <Routes>
+          <Route path="/" element={<Search />} />
+          <Route path="/set-search" element={<SetSearch />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </PerfectScrollbar>
+      <BackToTopButton
+        showBackToTop={showBackToTop}
+        scrollToTop={scrollToTop}
+      />
+      <Footer />
+    </div>
   );
 }
 
