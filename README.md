@@ -35,6 +35,6 @@ Found a bug? Have a suggestion? We'd love to hear from you! Please feel free to 
 
 ### Stay Connected
 
-Follow us on [Instagram](https://www.instagram.com/_vodka_98/) for updates, tips, and more exciting content related to Pokemon TCG Search V1.
+Follow us on [Github](https://github.com/naduncalcey/pokemon-tcg-app) for updates, tips, and more exciting content related to Pokemon TCG Search V1.
 
 Thanks for visiting our GitHub page! Enjoy exploring our app's fantastic features and dive into the world of Pokémon trading cards like never before. 🌟
