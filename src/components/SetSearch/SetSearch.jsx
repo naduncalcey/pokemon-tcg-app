@@ -1,29 +1,15 @@
 import React, { useState, useEffect } from "react";
+import CardGrid from "../CardGrid/CardGrid";
 import {
   Select,
   MenuItem,
   FormControl,
   InputLabel,
-  Button,
   CircularProgress,
 } from "@mui/material";
 import axios from "axios";
 import { SetSearchLayout } from "./SetSearch.Styled";
-import { LayoutCardGrid } from "../CardGrid/CardGrid.Styled";
 import CardDetailView from "../CardDetailedView/CardDetailedView";
-
-const typeToImage = {
-  grass: "#62BC5A",
-  fire: "#FF9C55",
-  water: "#5090D5",
-  lightning: "#F4D23B",
-  fighting: "#CE426A",
-  psychic: "#FA7178",
-  colorless: "#929DA2",
-  dragon: "#7a7560",
-  metal: "#4f4f4f",
-  fairy: "#f893d4",
-};
 
 const LoadingSpinner = () => (
   <div style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}>
@@ -92,10 +78,6 @@ const SetSearch = () => {
     setSelectedSet(event.target.value);
   };
 
-  const handleCardView = (card) => {
-    setSelectedCardDetails(card);
-  };
-
   const handleCloseCardView = () => {
     setSelectedCardDetails(null);
   };
@@ -143,37 +125,7 @@ const SetSearch = () => {
             </div>
           )
         )}
-        <LayoutCardGrid>
-          {cards.map((card) => (
-            <div key={card.id} className="pk">
-              <div className="pk-card">
-                <div className="pk-card-title">
-                  <h4>{card.name}</h4>
-                  {card.types && card.types[0] && (
-                    <p
-                      className="type-pill"
-                      style={{
-                        background: `${
-                          typeToImage[card.types[0].toLowerCase()]
-                        }`,
-                      }}
-                    >
-                      {card.types[0]}
-                    </p>
-                  )}
-                </div>
-                <div className="image-container">
-                  <img src={card.images.small} alt={card.name} />
-                </div>
-                <div className="bottom-bar">
-                  <Button onClick={() => handleCardView(card)}>
-                    View Details
-                  </Button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </LayoutCardGrid>
+        <CardGrid pokemonCards={cards} />
       </SetSearchLayout>
       <CardDetailView
         selectedCard={selectedCardDetails}
