@@ -25,21 +25,40 @@
 }
 
 .back-to-top {
-  display: flex;
-  position: fixed;
-  z-index: 999;
-  bottom: 2rem;
-  right: 2rem;
-  width: 60px;
-  align-items: center;
-  justify-content: center;
-  height: 60px;
-  padding: 0.5rem 1rem;
-  background-color: #007bff;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-}
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .back-to-top:hover {
+    background-color: #0056b3;
+  }
+
+    .scrollbar-container {
+      background: rgb(244, 244, 244) !important;
+    }
+
+    .pagination-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px; /* Add some space at the top */
+    }
+    
+    .page-number {
+      margin: 0 20px; /* Add some space between the page number and buttons */
+    }
 
 .back-to-top:hover {
   background-color: #0056b3;
