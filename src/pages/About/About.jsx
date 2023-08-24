@@ -1,10 +1,9 @@
 import React from "react";
-import HeroImage from "../../assets/images/pokemon.png";
 import styled from "styled-components";
-import FeatureCard from "./FeatureCard";
-import { features } from "./FeaturesData";
-import { Box, Grid, Stack, Typography } from "@mui/material";
+import FeatureCards from "./FeatureCards";
+import { Box, Stack, Typography } from "@mui/material";
 import UserFeedback from "../../components/Rating/UserFeedback";
+
 const AboutText = styled.div`
   padding: 26px 20px 26px 20px;
   ul {
@@ -64,8 +63,9 @@ function About() {
           </Typography>
         </Stack>
       </Box>
-      <FeatureCard />
-
+      {/* cards------------------------ */}
+      <FeatureCards />
+      {/* ------------------------ */}
       <Box
         sx={{
           margin: "2rem 0",
