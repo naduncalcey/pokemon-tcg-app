@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import CardGrid from "../CardGrid/CardGrid";
 import SearchIcon from "@mui/icons-material/Search";
-import { SearchContainer } from "./Search.Styled";
+import { SearchContainer, SearchHolder } from "./Search.Styled";
 
 function Search() {
   const [jsonResults, setJsonResults] = useState([]);
@@ -54,7 +54,7 @@ function Search() {
   }, [selectedPokemon, jsonResults]);
 
   return (
-    <>
+    <SearchHolder>
       <SearchContainer>
         <Stack style={{ background: "#fff" }}>
           <Autocomplete
@@ -105,7 +105,7 @@ function Search() {
           <CardGrid pokemonCards={pokemonCards} />
         </>
       )}
-    </>
+    </SearchHolder>
   );
 }
 
