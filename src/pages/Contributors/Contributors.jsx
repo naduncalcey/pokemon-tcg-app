@@ -77,7 +77,7 @@ function Contributors() {
         ) : (
           <div className="layout">
             {contributorsArray.map((contributor) => (
-              <div className='github-card' key={contributor.id}>
+              <div className="github-card" key={contributor.id}>
                 <div className="inner">
                   <img
                     src={contributor.avatar_url}
@@ -103,23 +103,25 @@ function Contributors() {
           </div>
         )}
       </div>
-
-      <h2>Previous Commits</h2>
-      {loadingCommits ? (
-        <CircularProgress />
-      ) : (
-        <ul>
-          {currentCommits.map((commit) => (
-            <li key={commit.sha}>{commit.commit.message}</li>
-          ))}
-        </ul>
-      )}
-
-      <Pagination
-        count={Math.ceil(commits.length / commitsPerPage)}
-        page={currentPage}
-        onChange={handlePageChange}
-      />
+      <div className="previous-commits">
+        <h2 className="github-title">Previous Commits</h2>
+        {loadingCommits ? (
+          <CircularProgress />
+        ) : (
+          <ul>
+            {currentCommits.map((commit) => (
+              <li key={commit.sha}>{commit.commit.message}</li>
+            ))}
+          </ul>
+        )}
+      </div>
+      <div className="pagination-box">
+        <Pagination
+          count={Math.ceil(commits.length / commitsPerPage)}
+          page={currentPage}
+          onChange={handlePageChange}
+        />
+      </div>
     </ContributorsDiv>
   );
 }

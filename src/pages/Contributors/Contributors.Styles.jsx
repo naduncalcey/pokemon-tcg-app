@@ -30,13 +30,13 @@ export const ContributorsDiv = styled.div`
   .github-contributors {
     padding-inline: 20px;
     padding-block: 20px 40px;
-    .github-title {
-      color: #e6e6e6;
-      font-family: Poppins;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 500;
-    }
+  }
+  .github-title {
+    color: #e6e6e6;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
   }
   .layout {
     padding: 20px 0;
@@ -59,6 +59,42 @@ export const ContributorsDiv = styled.div`
     .inner {
       display: flex;
       justify-content: center;
+      a {
+        svg {
+            fill: #fff;
+        }
+      }
+    }
+  }
+  .previous-commits {
+    padding: 10px 20px;
+    h2 {
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style: none;
+      li {
+        padding: 10px 10px;
+        margin-bottom: 10px;
+        background-color: #171717;
+        border-radius: 6px;
+      }
+    }
+  }
+  .pagination-box {
+    display: flex;
+    justify-content: center;
+    li {
+        svg {
+            fill: #fff;
+        }
+        button {
+            color: #fff;
+        }
+        button.Mui-selected {
+            background-color: #fff;
+            color: #101010;
+        }
     }
   }
 `;
