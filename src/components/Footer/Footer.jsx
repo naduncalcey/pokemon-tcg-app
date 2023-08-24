@@ -13,8 +13,7 @@ function Footer() {
     <AppFooter
       component="footer"
       sx={{
-        backgroundColor: "#272727",
-        color: "#fff",
+        backgroundColor: "#f8f9fa",
         borderTop: "1px solid #e9ecef",
         padding: "1rem",
         textAlign: "center",
