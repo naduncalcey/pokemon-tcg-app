@@ -9,6 +9,8 @@ import "react-perfect-scrollbar/dist/css/styles.css";
 import About from "./pages/About/About";
 import NotFound from "./pages/NotFound/NotFound";
 import SetSearch from "./components/SetSearch/SetSearch";
+import Home from "./pages/Home/Home";
+import Contributors from "./pages/Contributors/Contributors";
 
 function App() {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -51,9 +53,11 @@ function App() {
         containerRef={(ref) => (scrollContainerRef.current = ref)}
       >
         <Routes>
-          <Route path="/" element={<Search />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/search" element={<Search />} />
           <Route path="/set-search" element={<SetSearch />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contributors" element={<Contributors />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </PerfectScrollbar>

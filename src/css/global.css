@@ -77,3 +77,19 @@
 .git-link:hover {
   color: #0056b3;
 }
+
+.app-logo-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.app-logo {
+  height: 60px;
+  padding-inline: 10px;
+  margin-block: 10px;
+}
+
+.css-hip9hq-MuiPaper-root-MuiAppBar-root {
+  background-color: #272727 !important;
+}
