@@ -86,7 +86,7 @@ function Header() {
   );
 
   return (
-    <div className="Header">
+    <div className="header">
       <CssBaseline />
       <AppBar position="static">
         <Toolbar>
