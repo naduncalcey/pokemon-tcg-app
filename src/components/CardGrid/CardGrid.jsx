@@ -13,6 +13,7 @@ import CardDetailView from "../CardDetailedView/CardDetailedView";
 import { CardGridDiv, ChangeView, LayoutCardGrid } from "./CardGrid.Styled";
 import ViewListRoundedIcon from "@mui/icons-material/ViewListRounded";
 import GridViewRoundedIcon from "@mui/icons-material/GridViewRounded";
+import NoData from "../NoData/NoData";
 
 const typeToImage = {
   grass: "#62BC5A",
@@ -63,7 +64,7 @@ function CardGrid({ pokemonCards }) {
       </ChangeView>
       <CardGridDiv>
         {pokemonCards.length === 0 ? (
-          <p>No data available.</p>
+          <NoData text="No Data Available" />
         ) : isListView ? (
           <TableContainer component={Paper}>
             <Table>

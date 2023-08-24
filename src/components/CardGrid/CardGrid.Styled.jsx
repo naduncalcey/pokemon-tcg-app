@@ -2,11 +2,9 @@ import styled from "styled-components";
 
 export const CardGridDiv = styled.div`
   padding-block: 20px;
-  padding-inline: 20px;
 `;
 
 export const ChangeView = styled.div`
-  padding-inline: 20px;
   button {
     border-radius: 7px;
     border: 1px solid rgb(188, 188, 188);
@@ -35,7 +33,7 @@ export const LayoutCardGrid = styled.div`
           border-radius: 50px;
           font-weight: 500;
           color: #fff;
-          font-family:"ROBOTO"!important;
+          font-family: "ROBOTO" !important;
         }
       }
       .image-container {
@@ -53,6 +51,5 @@ export const LayoutCardGrid = styled.div`
     padding: 0.25rem 0;
     display: grid;
     place-items: center;
-    }
   }
 `;
