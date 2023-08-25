@@ -19,6 +19,7 @@ import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import InfoIcon from "@mui/icons-material/Info";
 import AppLogo from "../../assets/images/pokemon-trading-card-v1.svg";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -99,14 +100,16 @@ function Header() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            className="app-logo-container"
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1 }}
-          >
-            <img className="app-logo" src={AppLogo} alt="app-logo" />
-          </Typography>
+          <Link to="/">
+            <Typography
+              className="app-logo-container"
+              variant="h1"
+              component="div"
+              sx={{ flexGrow: 1 }}
+            >
+              <img className="app-logo" src={AppLogo} alt="app-logo" />
+            </Typography>
+          </Link>
         </Toolbar>
       </AppBar>
       <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer(false)}>

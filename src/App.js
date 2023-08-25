@@ -47,7 +47,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <section role="application" className="App">
       <Header />
       <PerfectScrollbar
         containerRef={(ref) => (scrollContainerRef.current = ref)}
@@ -66,7 +66,7 @@ function App() {
         scrollToTop={scrollToTop}
       />
       <Footer />
-    </div>
+    </section>
   );
 }
 
