@@ -1,85 +1,53 @@
 import React from "react";
-import HeroSvg from "../../assets/images/pockeSVG.svg";
-import { Box, Grid, Typography } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { HomeContainer } from "./Home.Styles";
+import { motion } from "framer-motion";
+import pokemon from "../../assets/images/charizard.png";
 
 function Home() {
-  const navigate = useNavigate();
+  const textFadeInVariant = {
+    hidden: { opacity: 0, x: -50 },
+    show: { opacity: 1, x: 0, transition: { duration: 1 } },
+  };
+
+  const imageFadeInVariant = {
+    hidden: { opacity: 0, y: -50 }, // Initially hidden and moved up
+    show: { opacity: 1, y: 0, transition: { duration: 1 } }, // Fade in and move down to its original position
+  };
+
   return (
-    <main style={{ minHeight: "82vh", display: "flex", backgroundColor: '#D0BFFF' }}>
-      <Grid
-        container
-        justifyContent="center"
-        alignItems="center"
-        sx={{ margin: "1.5rem 0" }}
-      >
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={6}
-          lg={6}
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <img style={{ maxWidth: "100%" }} src={HeroSvg} alt="HeroSvg" />
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={6}
-          lg={6}
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <Typography
-            className="font"
-            variant="h2"
-            fontWeight={700}
-            fontFamily={'Poppins'}
-            fontSize={{ xs: "2rem", md: "2.5", lg: "3rem" }}
-            textAlign="center" // Center-align the text
+    <HomeContainer>
+      <div className="box-container">
+        <div className="content">
+          <motion.div
+            initial="hidden"
+            animate="show"
+            variants={textFadeInVariant}
           >
-            Cutting-Edge <span><span className="my-special-element magic"><span className="magic-text">Pokémon</span></span></span> Trading Card App
-          </Typography>
-          {/* <div className="properties">
-            <div className="point">search with us</div>
-            <div className="point">find with us</div>
-            <div className="point">own with us</div>
-          </div> */}
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column", // Stack buttons vertically
-              alignItems: "center", // Center-align the buttons
-              marginTop: "2rem",
-            }}
-          >
-            <div className="btn-container">
-              <button
-                  className="btn"
-                  onClick={() => navigate("/search")}
-                  fontFamily={'Poppins'}
-                >
-                  Search Card
-                </button>
-              <button
-                onClick={() => navigate("/set-search")}
-                className="btn"
-              >
-                Search Set
+            <h1 className="heading">
+              Pokemon TCG Search - Ultimate Trading Card Experience.
+            </h1>
+            <p className="subtext">
+              Built specifically to help collectors who are building Pokemon TCG
+              master sets.
+            </p>
+            <div className="btn-layout">
+              <button className="btn-layout--primary">
+                Search Pokemon Cards
               </button>
+              <button className="btn-layout--secondary">Set Search</button>
             </div>
-          </Box>
-        </Grid>
-      </Grid>
-    </main>
+          </motion.div>
+        </div>
+        <motion.div
+          initial="hidden"
+          animate="show"
+          variants={imageFadeInVariant}
+          className="image"
+        >
+          <img src={pokemon} alt="charizard" />
+        </motion.div>
+      </div>
+    </HomeContainer>
   );
 }
 
