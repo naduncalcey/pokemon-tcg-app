@@ -1,6 +1,6 @@
 import React from "react";
 import HeroSvg from "../../assets/images/pockeSVG.svg";
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
