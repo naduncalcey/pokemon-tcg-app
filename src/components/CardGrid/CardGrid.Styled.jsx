@@ -33,7 +33,6 @@ export const LayoutCardGrid = styled.div`
           border-radius: 50px;
           font-weight: 500;
           color: #fff;
-          font-family: "ROBOTO" !important;
         }
       }
       .image-container {
