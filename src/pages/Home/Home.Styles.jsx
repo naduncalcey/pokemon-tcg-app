@@ -2,16 +2,21 @@ import styled from "styled-components";
 
 export const HomeContainer = styled.div`
   display: flex;
-  height: 100%;
+  min-height: 100vh;
+  padding:0;
   justify-content: center;
   align-items: center;
-  background-color: #101010;
+  background-color: #101010;   //here is the background color
+  background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
   .box-container {
     display: flex;
-    @media (max-width: 1600px) {
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    @media (max-width: 600px) {
       flex-direction: column;
     }
   }
+  
   .heading {
     color: #fff;
     max-width: 500px;
@@ -71,5 +76,14 @@ export const HomeContainer = styled.div`
     @media (max-width: 1450px) {
       margin: 0 auto;
     }
+  }
+  .text-gradient{
+    background: linear-gradient(109.6deg, #FFD700 0%, #FFA500 50%, #FF4500 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .content{
+    padding:0 10px;
   }
 `;
