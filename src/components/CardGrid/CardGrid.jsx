@@ -14,6 +14,7 @@ import { CardGridDiv, ChangeView, LayoutCardGrid } from "./CardGrid.Styled";
 import ViewListRoundedIcon from "@mui/icons-material/ViewListRounded";
 import GridViewRoundedIcon from "@mui/icons-material/GridViewRounded";
 import NoData from "../NoData/NoData";
+import { Tilt } from 'react-tilt';
 
 const typeToImage = {
   grass: "#62BC5A",
@@ -27,6 +28,18 @@ const typeToImage = {
   metal: "#4f4f4f",
   fairy: "#f893d4",
 };
+
+
+const defaultOptions = {
+  max: 35,
+  perspective: 1000,
+  scale: 1.1,
+  speed: 1000,
+  transition: true,
+  axis: null,
+  reset: true,
+  easing: "cubic-bezier(.03,.98,.52,.99)",
+}
 
 function CardGrid({ pokemonCards }) {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -82,20 +95,22 @@ function CardGrid({ pokemonCards }) {
               </TableHead>
               <TableBody>
                 {displayedCards.map((card) => (
-                  <TableRow key={card.id} onClick={() => handleViewClick(card)}>
-                    <TableCell>{card.name}</TableCell>
-                    <TableCell>{card.types}</TableCell>
-                    <TableCell>{card.hp}</TableCell>
-                    <TableCell>{card.subtypes}</TableCell>
-                    <TableCell>{card.rarity}</TableCell>
-                    <TableCell>{card.supertype}</TableCell>
-                    <TableCell>
-                      <Button onClick={() => handleViewClick(card)}>
-                        View Details
-                      </Button>
-                    </TableCell>
-                    {/* Add more table cells with card information */}
-                  </TableRow>
+                  <Tilt>
+                    <TableRow key={card.id} onClick={() => handleViewClick(card)}>
+                      <TableCell>{card.name}</TableCell>
+                      <TableCell>{card.types}</TableCell>
+                      <TableCell>{card.hp}</TableCell>
+                      <TableCell>{card.subtypes}</TableCell>
+                      <TableCell>{card.rarity}</TableCell>
+                      <TableCell>{card.supertype}</TableCell>
+                      <TableCell>
+                        <Button onClick={() => handleViewClick(card)}>
+                          View Details
+                        </Button>
+                      </TableCell>
+                      {/* Add more table cells with card information */}
+                    </TableRow>
+                  </Tilt>
                 ))}
               </TableBody>
             </Table>
@@ -103,37 +118,40 @@ function CardGrid({ pokemonCards }) {
         ) : (
           <LayoutCardGrid>
             {displayedCards.map((card) => (
-              <Paper elevation={3} key={card.id} className="pk">
-                <div className="pk-card">
-                  <div className="pk-card-title">
-                    <h4 title="card name">{card.name}</h4>
-                    {card.types && card.types[0] && (
-                      <p
-                        className="type-pill"
-                        title="type"
-                        style={{
-                          fontSize: "0.85rem",
-                          color: `${typeToImage[card.types[0].toLowerCase()]}`,
-                        }}
-                      >
-                        {card.types[0]}
-                      </p>
-                    )}
+              <Tilt options={defaultOptions}>
+
+                <Paper elevation={3} key={card.id} className="pk">
+                  <div className="pk-card">
+                    <div className="pk-card-title">
+                      <h4 title="card name">{card.name}</h4>
+                      {card.types && card.types[0] && (
+                        <p
+                          className="type-pill"
+                          title="type"
+                          style={{
+                            fontSize: "0.85rem",
+                            color: `${typeToImage[card.types[0].toLowerCase()]}`,
+                          }}
+                        >
+                          {card.types[0]}
+                        </p>
+                      )}
+                    </div>
+                    <div className="image-container">
+                      <img
+                        loading="lazy"
+                        src={card.images.small}
+                        alt={card.name}
+                      />
+                    </div>
+                    <div className="bottom-bar">
+                      <Button onClick={() => handleViewClick(card)}>
+                        View Details
+                      </Button>
+                    </div>
                   </div>
-                  <div className="image-container">
-                    <img
-                      loading="lazy"
-                      src={card.images.small}
-                      alt={card.name}
-                    />
-                  </div>
-                  <div className="bottom-bar">
-                    <Button onClick={() => handleViewClick(card)}>
-                      View Details
-                    </Button>
-                  </div>
-                </div>
-              </Paper>
+                </Paper>
+              </Tilt>
             ))}
           </LayoutCardGrid>
         )}

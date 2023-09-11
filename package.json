@@ -18,6 +18,7 @@
     "react-perfect-scrollbar": "^1.5.8",
     "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
+    "react-tilt": "^1.0.2",
     "styled-components": "^5.3.11",
     "web-vitals": "^2.1.4"
   },
