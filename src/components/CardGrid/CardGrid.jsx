@@ -95,7 +95,6 @@ function CardGrid({ pokemonCards }) {
               </TableHead>
               <TableBody>
                 {displayedCards.map((card) => (
-                  <Tilt>
                     <TableRow key={card.id} onClick={() => handleViewClick(card)}>
                       <TableCell>{card.name}</TableCell>
                       <TableCell>{card.types}</TableCell>
@@ -110,7 +109,6 @@ function CardGrid({ pokemonCards }) {
                       </TableCell>
                       {/* Add more table cells with card information */}
                     </TableRow>
-                  </Tilt>
                 ))}
               </TableBody>
             </Table>
