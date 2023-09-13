@@ -15,7 +15,7 @@ export const ChangeView = styled.div`
 export const LayoutCardGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(242px, 1fr));
-  gap: 20px;
+  gap: 30px;
   .pk {
     &-card {
       padding: 0.5rem;
